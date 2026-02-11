@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day Angel ❤️</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<div class="hearts"></div>
+
+<div class="container">
+    <h1 class="title">Happy Valentine’s Day</h1>
+    <h2 class="name">Angel ❤️</h2>
+
+    <div class="cat-section">
+        <img src="https://i.imgur.com/Z8qvG6D.png" class="cat">
+        <div class="note">You Are My Everything 💌</div>
+    </div>
+
+    <p class="text">
+        Angel, you are the most beautiful soul I have ever known.  
+        You make my world brighter, my days warmer, and my heart fuller.
+    </p>
+
+    <a href="page2.html" class="btn">Why You’re So Amazing →</a>
+
+    <button onclick="toggleMusic()" class="music-btn">Play / Pause Music 🎵</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why You’re Amazing Angel ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<div class="container">
+    <h1 class="title">Why You’re So Amazing</h1>
+    <h2 class="name">Angel 💖</h2>
+
+    <ul class="love-list">
+        <li>Your heart is pure and kind ❤️</li>
+        <li>Your smile lights up my world ✨</li>
+        <li>You are strong, beautiful, and inspiring 🌹</li>
+        <li>You make me feel loved every single day 💌</li>
+        <li>You are truly one of a kind 💎</li>
+    </ul>
+
+    <p class="text">
+        Even though we are so far away from each other,
+        my heart is always right there with you.
+    </p>
+
+    <a href="page3.html" class="btn">My Wish For You →</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Wish For You Angel ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<div class="container">
+    <h1 class="title">My Valentine Wish</h1>
+    <h2 class="name">Angel 💕</h2>
+
+    <p class="text">
+        It makes me sad that we are so far away from each other today.
+        But distance will never change how much I care about you.
+    </p>
+
+    <p class="text">
+        I hope you have the greatest Valentine’s Day of your life.
+        I hope today is filled with happiness, love, laughter,
+        and everything beautiful — just like you.
+    </p>
+
+    <h2 class="final">I Love You, Angel ❤️</h2>
+
+    <a href="index.html" class="btn">Back To Start 💖</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff4e73, #ff8fab);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 60px 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+.name {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.text {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.cat-section {
+    position: relative;
+    display: inline-block;
+    margin: 30px 0;
+}
+
+.cat {
+    width: 260px;
+}
+
+.note {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: #ff4e73;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.love-list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.love-list li {
+    margin: 10px 0;
+}
+
+.btn, .music-btn {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 12px 25px;
+    background: white;
+    color: #ff4e73;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover, .music-btn:hover {
+    background: #ffe6ec;
+}
+
+.final {
+    font-size: 35px;
+    margin-top: 40px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Floating Hearts */
+.hearts::before {
+    content: "💖 💕 💘 💝 💗";
+    position: fixed;
+    width: 100%;
+    animation: floatHearts 10s linear infinite;
+    font-size: 30px;
+}
+
+@keyframes floatHearts {
+    0% {transform: translateY(100vh);}
+    100% {transform: translateY(-10vh);}
+}
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
